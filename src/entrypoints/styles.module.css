@@ -41,8 +41,3 @@
   background: var(--darker-border-color);
   cursor: pointer;
 }
-
-.leaflet-container {
-  width: 350px;
-  height: 350px;
-}

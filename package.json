@@ -1,13 +1,13 @@
 {
-  "name": "datocms-plugin-osm-plugin",
-  "description": "",
+  "name": "datocms-plugin-osm-geocoder",
+  "description": "Find latitude and longitude for addresses using OpenStreetMap",
   "homepage": "https://github.com/MortenNorrehus/datocms-osm-geocoder",
   "private": false,
   "version": "0.1.0",
-  "author": " <>",
+  "author": "Morten Nørrehus",
   "type": "module",
   "keywords": [
-    "openstreetmap"
+    "openstreetmap","geocoding"
   ],
   "datoCmsPlugin": {
     "title": "OpenStreetMap Geocoding",
