@@ -1,16 +1,16 @@
 {
   "name": "datocms-plugin-osm-plugin",
   "description": "",
-  "homepage": "https://github.com/<USER>/<REPO>",
+  "homepage": "https://github.com/MortenNorrehus/datocms-osm-geocoder",
   "private": false,
   "version": "0.1.0",
   "author": " <>",
   "type": "module",
   "keywords": [
-    "datocms-plugin"
+    "openstreetmap"
   ],
   "datoCmsPlugin": {
-    "title": "Osm Plugin",
+    "title": "OpenStreetMap Geocoding",
     "coverImage": "docs/cover-1200x800.png",
     "previewImage": "docs/preview.mp4",
     "entryPoint": "dist/index.html",

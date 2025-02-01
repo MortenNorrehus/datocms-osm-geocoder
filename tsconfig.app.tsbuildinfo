@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/helpers/formataddress.tsx","./src/components/mapcomponent.tsx","./src/components/suggestionslist.tsx","./src/entrypoints/adressinput.tsx","./src/entrypoints/configscreen.tsx","./src/utils/render.tsx"],"version":"5.7.3"}
