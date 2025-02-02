@@ -14,7 +14,7 @@
     "coverImage": "docs/image.png",
     "entryPoint": "dist/index.html",
     "permissions": [
-      "currentUserAccessToken"
+ 
     ]
   },
   "files": [

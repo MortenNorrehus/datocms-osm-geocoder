@@ -28,7 +28,7 @@ interface Suggestion {
 
 export const AddressInput = ({ ctx }: any) => {
   const initialMapboxValue = useMemo(
-    () => JSON.parse(ctx.formValues[ctx.fieldPath] || ""),
+    () => JSON.parse(ctx.formValues[ctx.fieldPath] || "{}"),
     [ctx.formValues, ctx.fieldPath]
   );
 

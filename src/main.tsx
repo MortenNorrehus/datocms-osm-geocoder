@@ -11,8 +11,8 @@ connect({
 
   manualFieldExtensions: () => [
     {
-      id: "osm_address",
-      name: "Osm Address",
+      id: "better_geolocation",
+      name: "Better Geolocation",
       type: "editor",
       fieldTypes: "all",
       configurable: true,
@@ -21,7 +21,7 @@ connect({
 
   renderFieldExtension: (fieldExtensionId, ctx) => {
     switch (fieldExtensionId) {
-      case "osm_address":
+      case "better_geolocation":
         return render(<AddressInput ctx={ctx} />);
     }
   },
