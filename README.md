@@ -2,4 +2,4 @@ Enable editors to easily get latitude and longitude for addresses using OpenStre
 
 Plugins supports search-as-you-type and fuzzy search.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/MortenNorrehus/datocms-osm-geocoder/blob/main/docs/screenshot.png "Screenshot")
