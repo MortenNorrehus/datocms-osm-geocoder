@@ -1,4 +1,4 @@
-import s from "../entrypoints/styles.module.css";
+import "../style.css";
 import { Spinner } from "datocms-react-ui";
 import mapPinIcon from "../assets/svg/mapPinIcon.svg";
 
@@ -10,6 +10,7 @@ interface Suggestion {
     postcode?: string;
     country?: string;
     osm_id: string;
+    type: string;
   };
   display_name: string;
   geometry: {
@@ -30,13 +31,17 @@ export const SuggestionsList = ({
 }: SuggestionsListProps) => {
   return (
     <div style={{ position: "absolute", zIndex: 1, width: "100%" }}>
-      <ul className={s.suggestions}>
-        {loading && <Spinner />}
+      <ul className="suggestions">
+        {loading && (
+          <li>
+            <Spinner /> <p>fetching data</p>
+          </li>
+        )}
         {!loading &&
           suggestions.length > 0 &&
           suggestions.map((suggestion) => (
             <li
-              className={s.suggestion}
+              className="suggestion"
               key={suggestion.properties.osm_id}
               onClick={() => onSelect(suggestion)}
             >

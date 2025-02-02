@@ -1,0 +1,43 @@
+.inspector {
+  margin-top: var(--spacing-l);
+}
+
+.fieldGroup {
+  position: relative;
+}
+
+.fieldGroupRow {
+  display: flex;
+  gap: 20px;
+}
+
+.suggestions {
+  z-index: 999;
+  height: 100%;
+
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.suggestions li {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.suggestions li:hover {
+  background: var(--darker-border-color);
+  cursor: pointer;
+}

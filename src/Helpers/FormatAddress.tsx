@@ -1,6 +1,14 @@
 export const FormatAddress = (address: any) => {
-  console.log(address);
-  return `${address.name || address.street} ${address.housenumber || ""}, ${
-    address.postcode
-  } ${address.town || address.city || address.village}, ${address.country}`;
+  const { name, street, housenumber, postcode, town, city, village, country } =
+    address;
+
+  const addressName = name || street || "";
+  const addressHouseNumber = housenumber || "";
+  const addressPostcode = postcode || "";
+  const addressTown = town || city || village || "";
+  const addressCountry = country || "";
+
+  return `${addressName} ${
+    addressHouseNumber ? addressHouseNumber + "," : ""
+  } ${addressPostcode} ${addressTown}, ${addressCountry}`;
 };

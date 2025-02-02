@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
-import s from "./styles.module.css";
+import "../style.css";
 import {
   Canvas,
   FieldGroup,
@@ -18,6 +18,7 @@ interface Suggestion {
     city?: string;
     postcode?: string;
     country?: string;
+    type: string;
   };
   display_name: string;
   geometry: {
@@ -76,10 +77,12 @@ export const AddressInput = ({ ctx }: any) => {
         }
         const result = await response.json();
 
-        const places = result.features.map((item: any) => ({
-          ...item,
-          display_name: FormatAddress(item.properties),
-        }));
+        const places = result.features
+          .filter((item: Suggestion) => item.properties.type !== "country")
+          .map((item: any) => ({
+            ...item,
+            display_name: FormatAddress(item.properties),
+          }));
 
         setSuggestions(places.length > 0 ? places : []);
         setLoading(false);
@@ -112,11 +115,11 @@ export const AddressInput = ({ ctx }: any) => {
 
   return (
     <Canvas ctx={ctx}>
-      <FieldGroup className={s.fieldGroup}>
+      <FieldGroup className="fieldGroup">
         <FieldWrapper
           id="address-field"
           label="Address Lookup"
-          hint="Start typing an address or venue name..."
+          hint="Start typing an address to search..."
         >
           <div style={{ position: "relative" }}>
             <TextInput
@@ -124,7 +127,7 @@ export const AddressInput = ({ ctx }: any) => {
               name="address-line"
               type="text"
               value={searchQuery || ""}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
             <SuggestionsList
               suggestions={suggestions}
@@ -168,7 +171,7 @@ export const AddressInput = ({ ctx }: any) => {
         />
       </FieldGroup>
 
-      <FieldGroup className={s.fieldGroupRow}>
+      <FieldGroup className="fieldGroupRow">
         <FieldWrapper id="latitude" label="Latitude">
           <TextInput
             id="latitude-input"
