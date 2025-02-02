@@ -3,7 +3,7 @@
   "description": "Find latitude and longitude for addresses using OpenStreetMap and Photon API",
   "homepage": "https://github.com/MortenNorrehus/datocms-osm-geocoder",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Morten Nørrehus",
   "type": "module",
   "keywords": [
