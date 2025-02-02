@@ -138,7 +138,7 @@ export const AddressInput = ({ ctx }: any) => {
         </FieldWrapper>
       </FieldGroup>
 
-      <FieldGroup style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
+      <FieldGroup className="address-data">
         <TextField
           id="street-input"
           name="street"
@@ -155,11 +155,11 @@ export const AddressInput = ({ ctx }: any) => {
         />
 
         <TextField
-          id="country-input"
-          name="country"
-          value={addressData?.country || ""}
-          onChange={(e) => setAddressData({ ...addressData, country: e })}
-          label="Country"
+          id="postcode-input"
+          name="postcode"
+          value={addressData?.postcode || ""}
+          onChange={(e) => setAddressData({ ...addressData, postcode: e })}
+          label="Postal Code"
         />
 
         <TextField
@@ -168,6 +168,14 @@ export const AddressInput = ({ ctx }: any) => {
           value={addressData?.city || ""}
           onChange={(e) => setAddressData({ ...addressData, city: e })}
           label="City"
+        />
+
+        <TextField
+          id="country-input"
+          name="country"
+          value={addressData?.country || ""}
+          onChange={(e) => setAddressData({ ...addressData, country: e })}
+          label="Country"
         />
       </FieldGroup>
 

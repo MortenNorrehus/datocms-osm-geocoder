@@ -2,6 +2,12 @@
   margin-top: var(--spacing-l);
 }
 
+.address-data {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .fieldGroup {
   position: relative;
 }
