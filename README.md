@@ -2,6 +2,4 @@ Enable editors to easily get latitude and longitude for addresses using OpenStre
 
 Plugins supports search-as-you-type and fuzzy search.
 
-<img width="761" alt="Screenshot" src="https://github.com/user-attachments/assets/4eb20869-6c53-4440-a65b-497d8675561d" />
-
-Plugin is developed by @LAIT @ <a href="https://lait.dk">lait.dk</a>
+![osm-screenshot](https://github.com/user-attachments/assets/4b5e3f80-d582-479a-848d-6adb9265f710)
