@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import "../style.css";
+import get from "lodash/get";
 import {
   Canvas,
   FieldGroup,
@@ -9,7 +10,7 @@ import {
 } from "datocms-react-ui";
 import { SuggestionsList } from "../components/SuggestionsList";
 import { FormatAddress } from "../Helpers/FormatAddress";
-import MapComponent from "../components/MapComponent";
+import MapView from "../components/Map";
 
 interface Suggestion {
   properties: {
@@ -27,12 +28,16 @@ interface Suggestion {
 }
 
 export const AddressInput = ({ ctx }: any) => {
+  const currentValue = get(ctx.formValues, ctx.fieldPath);
+
   const initialMapboxValue = useMemo(
-    () => JSON.parse(ctx.formValues[ctx.fieldPath] || "{}"),
+    () => JSON.parse(currentValue || "{}"),
     [ctx.formValues, ctx.fieldPath]
   );
 
   const [addressData, setAddressData] = useState(initialMapboxValue);
+
+  console.log("ADDRESS", addressData);
   const [suggestions, setSuggestions] = useState([]);
   const [searchQuery, setSearchQuery] = useState(
     addressData?.display_name || ""
@@ -200,7 +205,7 @@ export const AddressInput = ({ ctx }: any) => {
         </FieldWrapper>
       </FieldGroup>
 
-      <MapComponent
+      <MapView
         latitude={addressData?.latitude || 0}
         longitude={addressData?.longitude || 0}
       />

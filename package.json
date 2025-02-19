@@ -3,11 +3,14 @@
   "description": "Find latitude and longitude for addresses using OpenStreetMap and Photon API",
   "homepage": "https://github.com/MortenNorrehus/datocms-osm-geocoder",
   "private": false,
-  "version": "0.1.8",
+  "version": "0.2.0",
   "author": "Morten Nørrehus",
   "type": "module",
   "keywords": [
-    "datocms-plugin","openstreetmap","geocoding","location"
+    "datocms-plugin",
+    "openstreetmap",
+    "geocoding",
+    "location"
   ],
   "datoCmsPlugin": {
     "title": "Better Geolocation",
@@ -29,12 +32,13 @@
     "datocms-plugin-sdk": "^2.0.9",
     "datocms-react-ui": "^2.0.9",
     "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
+    "ol": "^10.4.0",
     "react": "^19.0.0-rc.1",
-    "react-dom": "^19.0.0-rc.1",
-    "react-leaflet": "^5.0.0-rc.2"
+    "react-dom": "^19.0.0-rc.1"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.9.16",
+    "@types/lodash": "^4.17.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
